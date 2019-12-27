@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,5 +10,12 @@
 </head>
 <body>
     <h1>homepage up</h1>
+
+{% if user.is_authenticated %}
+    <h3>authentication successful {{ username }}</h3>
+{% endif %}
+
+<img src="{% static 'img/csgo.jpg' %}" alt="image">
+
 </body>
 </html>
